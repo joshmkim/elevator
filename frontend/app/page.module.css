@@ -1,0 +1,717 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist-sans);
+  background: #ffffff;
+  color: #2a2a2a;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1080px;
+  padding: 1.25rem;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: #111827;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.controlsLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.controlsRight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: 0;
+}
+
+.speedRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.speedLabel {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.speedButtons {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.speedButton {
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(255, 255, 255, 0.65);
+  color: #374151;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.speedButton:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.speedButtonActive {
+  background: rgba(255, 214, 165, 0.6);
+  border: 2px solid rgba(245, 158, 11, 0.9);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.14);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 10px 30px rgba(255, 112, 173, 0.12);
+}
+
+.brandMark {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #ff70ad;
+  box-shadow: 0 0 0 5px rgba(255, 112, 173, 0.16);
+}
+
+.brandText {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.scenarioRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.25rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.scenarioLabel {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.scenarioButtons {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.scenarioButton {
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(255, 255, 255, 0.65);
+  color: #374151;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.scenarioButton:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.scenarioButtonActive {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 112, 173, 0.95);
+  background: rgba(255, 228, 240, 0.95);
+  box-shadow:
+    0 0 0 4px rgba(255, 112, 173, 0.16),
+    0 14px 35px rgba(255, 255, 255, 0.35);
+}
+
+.error {
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 210, 210, 0.85);
+  color: #7f1d1d;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  color: #111827;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 26px rgba(31, 41, 55, 0.08);
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Ensure scenario/speed "active" styles win over the generic .controls button rule */
+.controls .scenarioButtons .scenarioButton {
+  background: rgba(255, 255, 255, 0.65);
+  border: 2px solid rgba(148, 163, 184, 0.0);
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  transition: none;
+}
+
+.controls .scenarioButtons .scenarioButton:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.controls .scenarioButtons .scenarioButtonActive:hover {
+  background: rgba(255, 228, 240, 0.95);
+}
+
+.controls .scenarioButtons .scenarioButton:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(255, 112, 173, 0.22),
+    0 14px 35px rgba(255, 255, 255, 0.35);
+}
+
+.controls .scenarioButtons .scenarioButtonActive {
+  background: rgba(255, 228, 240, 0.95);
+  border: 2px solid rgba(255, 112, 173, 0.95);
+  box-shadow:
+    0 0 0 4px rgba(255, 112, 173, 0.16),
+    0 14px 35px rgba(255, 255, 255, 0.35);
+}
+
+.controls .speedButtons .speedButton {
+  background: rgba(255, 255, 255, 0.65);
+  border: 2px solid rgba(148, 163, 184, 0.0);
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  transition: none;
+}
+
+.controls .speedButtons .speedButton:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.controls .speedButtons .speedButtonActive:hover {
+  background: rgba(255, 214, 165, 0.6);
+}
+
+.controls .speedButtons .speedButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.22);
+}
+
+.controls .speedButtons .speedButtonActive {
+  background: rgba(255, 214, 165, 0.6);
+  border: 2px solid rgba(245, 158, 11, 0.9);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.14);
+}
+
+.iconButton {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  display: inline-grid;
+  place-items: center;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 26px rgba(31, 41, 55, 0.08);
+}
+
+.iconButton:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 12px 30px rgba(31, 41, 55, 0.1),
+    0 0 0 4px rgba(255, 112, 173, 0.14);
+}
+
+.iconButton:focus-visible {
+  outline: none;
+  box-shadow:
+    0 12px 30px rgba(31, 41, 55, 0.1),
+    0 0 0 4px rgba(255, 112, 173, 0.22);
+}
+
+.iconButtonLarge {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+}
+
+.iconGlyph {
+  display: inline-flex;
+  width: 1.15em;
+  height: 1.15em;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.iconStack {
+  position: relative;
+  width: 1.15em;
+  height: 1.15em;
+  display: inline-block;
+}
+
+.iconLayer {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLayerHidden {
+  opacity: 0;
+}
+
+.iconLayerVisible {
+  opacity: 1;
+}
+
+/* Minor optical tuning: keep pause/restart from looking smaller. */
+.iconGlyphPause {
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.iconGlyphRestart {
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.iconGlyphPlay {
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+.iconButton:active {
+  transform: translateY(1px);
+}
+
+.simTime {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  font-size: 0.85rem;
+  color: #111827;
+  min-width: 92px;
+  justify-content: center;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.statusDotOn {
+  background: #22c55e;
+  box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.18);
+}
+
+.statusDotOff {
+  background: #6b7280;
+  box-shadow: 0 0 0 4px rgba(107, 114, 128, 0.12);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: max-content 320px;
+  gap: 0.75rem;
+  align-items: start;
+  justify-content: center;
+}
+
+.buildingWrap {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 20px;
+  padding: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(31, 41, 55, 0.12);
+  width: max-content;
+  justify-self: center;
+}
+
+.building {
+  display: flex;
+  width: max-content;
+  height: 520px; /* 10 floors × 52px */
+}
+
+.shaft {
+  width: 112px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  margin-right: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  overflow: hidden;
+}
+
+.shaftGlow {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.cab {
+  position: absolute;
+  left: 10px;
+  width: 92px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 112, 173, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.12s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 16px 34px rgba(31, 41, 55, 0.18);
+}
+
+.cabArrow {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #ff70ad;
+}
+
+.cabUp .cabArrow::after {
+  content: "▲";
+}
+
+.cabDown .cabArrow::after {
+  content: "▼";
+}
+
+.cabIdle .cabArrow::after {
+  content: "●";
+  color: #9ca3af;
+}
+
+.cabDoors {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.cabDoor {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.92);
+  transition: transform 0.2s ease;
+}
+
+.cabDoorsOpen .left {
+  transform: translateX(-100%);
+}
+
+.cabDoorsOpen .right {
+  transform: translateX(100%);
+}
+
+.cabDoorsOpen .cabDoor {
+  background: transparent;
+}
+
+.cabCounter {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #111827;
+  text-shadow: 0 2px 12px rgba(255, 112, 173, 0.12);
+}
+
+.floors {
+  flex: 0 0 260px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.floor {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.55);
+  padding: 0 0.35rem;
+  gap: 0.5rem;
+}
+
+.floor:last-child {
+  border-bottom: none;
+}
+
+.floorNum {
+  width: 1.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #6b7280;
+}
+
+.floorLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  flex: 0 0 156px;
+}
+
+.floorPeople {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  max-width: 100px;
+}
+
+.peopleRow {
+  align-items: center;
+  gap: 4px;
+  display: inline-flex;
+  min-height: 14px;
+  min-width: 0;
+  max-width: 100px;
+  overflow: hidden;
+}
+
+.peopleRowDown .avatar {
+  background: linear-gradient(180deg, #ffd6a5, #ff70ad);
+}
+
+.avatar {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #a7f3d0, #93c5fd);
+  box-shadow: 0 8px 18px rgba(31, 41, 55, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.avatarMore {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-variant-numeric: tabular-nums;
+  margin-left: 2px;
+}
+
+.floorCalls {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.callPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.2rem 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.callPillDown {
+  background: rgba(255, 228, 240, 0.85);
+  border: 1px solid rgba(255, 112, 173, 0.25);
+}
+
+.callIcon {
+  color: #2563eb;
+}
+
+.callPillDown .callIcon {
+  color: #ff70ad;
+}
+
+.callCount {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #111827;
+}
+
+.panel {
+  position: sticky;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-self: center;
+  align-items: center;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: #111827;
+  width: 272px;
+  text-align: center;
+}
+
+.panelCard {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 22px;
+  padding: 1.05rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 50px rgba(31, 41, 55, 0.1);
+  width: 272px;
+}
+
+.panelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+}
+
+.panelRow:last-child {
+  border-bottom: none;
+}
+
+.panelLabel {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.panelValue {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  color: #111827;
+}
+
+.panelSectionTitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.panelEmpty {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.destGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.destButton {
+  position: relative;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.7);
+  color: #111827;
+  cursor: default;
+  display: grid;
+  place-items: center;
+}
+
+.destButtonFloor {
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.destButtonActive {
+  background: rgba(255, 214, 165, 0.55);
+  border: 1px solid rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.18);
+}
+
+.destButtonLast {
+  grid-column: 2;
+}
+
+@media (max-width: 940px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .panel {
+    position: static;
+  }
+}
