@@ -20,7 +20,7 @@ cd frontend && npm install && npm run dev
 
 Open http://localhost:3000. 
 
-I have a couple of different scenarios, (high,medium, and low traffic). You can edit these files in elevator/backend/scenarios. I only have buttons to access these three scenarios on my webapp. 
+I have a couple of different scenarios, (high, medium, and low traffic). You can edit these files in elevator/backend/scenarios. I only have buttons to access these three scenarios on my webapp. 
 
 ## Input / Output (CLI)
 
